@@ -1,3 +1,7 @@
 package mpi
 
-type INT C.int
+import "C"
+
+type Int C.int
+type VOID C.void
+type Float C.float
