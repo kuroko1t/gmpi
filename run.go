@@ -27,3 +27,7 @@ func Allreduce(sendbuf *float64,recvbuf *float64, count int,
 	C.MPI_Allreduce(unsafe.Pointer(sendbuf), unsafe.Pointer(recvbuf), C.int(count),
 		datatype, op, comm)
 }
+
+func Barrier(comm Comm) {
+	C.MPI_Barrier(comm);
+}
